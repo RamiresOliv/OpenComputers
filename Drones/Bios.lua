@@ -53,11 +53,16 @@ local function execute()
                     state = false
                     motive = "no secound argument..."
                 end
+            elseif Splitted_cmd[1] == "shutdown" then
+                state = true
+                returnMSG("Drone Shutdownned port '2412' closed.")
+                LAST_executation_result.returnned = computer.shutdown()
             else
                 motive = "This command not exists!"
             end
             LAST_executation_result.motive = motive
             LAST_executation_result.state = state
+            if LAST_executation_result.returnned == nil then LAST_executation_result.returnned = " " end
             if motive ~= "none" then returnMSG(motive) end
             return LAST_executation_result
         end
