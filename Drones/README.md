@@ -1,4 +1,4 @@
-# Drones
+<h1 align="center">🧰 Drones 🛠</h1>
 > Bora fazer Drone?
 
 Sumario:
@@ -144,4 +144,19 @@ setstatustext
 
 ![image](https://user-images.githubusercontent.com/69019082/163386367-02cb9f8f-1d08-465d-907e-90c4458c44a8.png)
 
+setlightcolor
 
+![image](https://user-images.githubusercontent.com/69019082/163386586-f8f95c75-d84e-4988-ad5c-c94f1d94a1dd.png)
+
+![image](https://user-images.githubusercontent.com/69019082/163386567-0c0398a8-9312-4399-9d75-53f78705f434.png)
+
+# Terminando
+
+espero que tenha gostado fiz isso ja faz uns 3 dias :)
+
+e agora ta documentado no Github mas em fim,
+talvez venha mais updates na bios ou client então se o codigo daqui pra frente esteja diferente não tenha panico.
+
+vlw por ver e espero ter te ajudado.
+
+<h1 align="center">🧰 Drones 🛠</h1>
