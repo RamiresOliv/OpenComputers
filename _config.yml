@@ -1,0 +1,9 @@
+theme: minima
+
+title: OpenComputers Things
+description: >-
+  OpenComputers Random things
+baseurl: OpenComputers
+
+# Outros
+github_username: ramiresoliv
