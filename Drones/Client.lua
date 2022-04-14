@@ -10,18 +10,19 @@ local term = require("term")
 local modem = component.modem
 modem.open(2412)
 print("Warning: for no give errors you can use the commands like: 'move 0,3,0' with NO SPACES,\nif you put spaces the script can't read it.\n")
-while true do
-  local cmd = io.read()
-  if not cmd then return end
-  if cmd:lower() == "clear" or cmd:lower() == "cls" then term.clear() else
-  modem.broadcast(2412, cmd)
-  local evt, _, _, _, _, msg = event.pull(5, "modem_message")
-  if msg == "" or msg == nil then
-    io.stderr:write("None Returns.\n")
-    print("Remember: if have so muth time to none returns? the port '2412' can be closed. Check the Drone and restart this script.")
 
-  else
-    print(msg)
-  end
-  end
+
+while true do
+    local command = io.read()
+    if not command then return end
+    if command:lower() == "clear" or command:lower() == "cls" then term.clear() else
+        modem.broadcast(2412, command:lower()) -- Send Command to the Drone
+        local evt, _, _, _, _, msg = event.pull("modem_message")
+        if msg == "" or msg == nil then
+            io.stderr:write("None Returns.\n")
+            print("Remember: if have so muth time to none returns? the port '2412' can be closed. Check the Drone and restart this script.")
+        else
+            print(msg)
+        end
+    end
 end
