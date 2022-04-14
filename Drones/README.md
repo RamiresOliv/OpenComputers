@@ -1,3 +1,4 @@
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 <h1 align="center">🧰 Drones 🛠</h1>
 
 
