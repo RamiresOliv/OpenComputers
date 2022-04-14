@@ -1,7 +1,12 @@
-# OpenComputers
+<h1 align="center">🧰 OpenComputers 🛠</h1>
 
-Be free to explore this repo, here i will create like a template from somethings in OpenComputers
+> Aqui tem algumas coisas simples que estou fazendo para ser usado no OpenComputers
 
-[DRONES](Drones)
+**NÃO SOU O CRIADOR ORIGINAL DE OPENCOMPUTERS!**<br>
+Simples Sumario:<br>
+<a href="Drones">Drones</a>
 
-Forge V-1.12.2
+
+Repositorio ORIGINAL: <a href="https://github.com/MightyPirates/OpenComputers">MightyPirates/OpenComputers</a><br>
+<i>Versão 1.12.2</i>
+<h1 align="center">🧰 OpenComputers 🛠</h1>
