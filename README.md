@@ -1,3 +1,4 @@
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <h1 align="center">🧰 OpenComputers 🛠</h1>
 
 > Aqui tem algumas coisas simples que estou fazendo para ser usado no OpenComputers
