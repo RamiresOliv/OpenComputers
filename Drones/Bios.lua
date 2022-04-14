@@ -1,31 +1,3 @@
---[[
-
-Welcome to the Bios.lua
-be free to change
-
-Explain:
-
-This script will be like the main part for the drone to work, it is so important that if it is not present the drone will not turn on.
-Okay, but what is it anyway? The bios is where the drone system will act like "do" or "go" things like that.
-
-The Script is still under construction, many things will change!
-
-NEVER! USE lua bios (default)
-it is incompatible for drones! It is necessary to create a compatible bios.
-
-In this case, this script takes information sent or specific commands sent from Client.lua to bios via Network,
-thus executing functions within the bios.
-
-Requirements:
-- Wireless network card - LVL1 or LVL2
-- EEPROM configured with this code.
-- FLASH to put this script inside the EEPROM.
-
-Sample code: https://gist.github.com/fnuecke/6bcbd66910b946b54ec7
-
-Tutorial at README.md on Drones!
-]]
-
 local function proxyComp(name) return component.proxy(component.list(name)()) end
 function Split(s, delimiter) result = {}; for match in (s..delimiter):gmatch("(.-)"..delimiter) do table.insert(result, tostring(match)); end return result; end
 local m = proxyComp("modem")
@@ -51,7 +23,7 @@ local function execute()
             motive = "none"
             state = false
 
-            if Splitted_cmd[1] == "move" then
+            if Splitted_cmd[1] == "move" or Splitted_cmd[1] == "mov" then
                 if Splitted_cmd[2] then
                     state = true
                     Args = Split(Splitted_cmd[2], ",")
@@ -63,23 +35,38 @@ local function execute()
                     state = false
                     motive = "no secound argument..."
                 end
-            elseif Splitted_cmd[1] == "setstatustext" then
+
+            elseif Splitted_cmd[1] == "setstatustext" or Splitted_cmd[1] == "sst" then
                 if Splitted_cmd[2] then
                     state = true
                     LAST_executation_result.returnned = d.setStatusText(Splitted_cmd[2])
                 else
                     state = false
+                    motive = "no secound argument..."
                 end
-            elseif Splitted_cmd[1] == "setlightcolor" then
+
+            elseif Splitted_cmd[1] == "setlightcolor" or Splitted_cmd[1] == "slc" then
                 if Splitted_cmd[2] then
                     state = true
                     LAST_executation_result.returnned = d.setLightColor(tonumber(Splitted_cmd[2]))
                 else
                     state = false
+                    motive = "no secound argument..."
                 end
+
             elseif Splitted_cmd[1] == "getlightcolor" then
                 state = true
                 LAST_executation_result.returnned = d.getLightColor()
+
+            elseif Splitted_cmd[1] == "setacceleration" or Splitted_cmd[1] == "sa" then
+                if Splitted_cmd[2] then
+                    state = true
+                    LAST_executation_result.returnned = d.setAcceleration(tonumber(Splitted_cmd[2]))
+                else
+                    state = false
+                    motive = "no secound argument..."
+                end
+
 
             else
                 motive = "This command not exists!"
