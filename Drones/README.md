@@ -1,5 +1,7 @@
 <h1 align="center">🧰 Drones 🛠</h1>
-> Bora fazer Drone?
+
+
+> Bora fazer Drones?
 
 Sumario:
 - [Como conectar o VSCODE em um computador no OpenComputers](#configurando-o-vscode-junto-com-o-opencomputers)
@@ -149,6 +151,47 @@ setlightcolor
 ![image](https://user-images.githubusercontent.com/69019082/163386586-f8f95c75-d84e-4988-ad5c-c94f1d94a1dd.png)
 
 ![image](https://user-images.githubusercontent.com/69019082/163386567-0c0398a8-9312-4399-9d75-53f78705f434.png)
+
+# Notas antigas
+
+## AVISO MUUUUUUUUUITO IMPORTANTE:
+Talvez coisas faladas sobre essas notas ESTEJAM DESATUALIZADAS!
+então pode ter algumas coisas que não tem nada a ver com hoje em dia.
+
+## Bios
+
+```
+SOBRE BIOS ANTIGA:
+Bem-vindo ao Bios.lua
+seja livre para mudar
+
+Explicação:
+
+
+Este script será como a parte principal para o drone funcionar, é tão importante que se não estiver presente o drone não ligará.
+Ok, mas o que é afinal? A bios é onde o sistema do drone agirá como "fazer tal coisa" ou "ir para tal lugar" coisas assim.
+O Script ainda está em construção, muitas coisas vão mudar!
+
+NUNCA! USE a lua bios (padrão)
+é incompatível para drones! É necessário criar uma bios compatível.
+Neste caso, este script leva informações enviadas ou comandos específicos enviados de Client.lua para bios via Network,
+executando assim funções dentro da bios.
+
+Requisitos:
+- Wireless Network Card - LVL1 ou LVL2
+- EEPROM configurada com este código.
+- FLASH para colocar este script dentro da EEPROM.
+Código de exemplo: https://gist.github.com/fnuecke/6bcbd66910b946b54ec7
+```
+## Client
+
+```
+SOBRE CLIENT ANTIGA:
+
+Ao contrário da Bios,
+Client.lua envia a informação via Network para a bios remotamente,
+por isso é necessário usar este script em um computador com um Wireless Network Card LVL1 ou LVL2
+```
 
 # Terminando
 
