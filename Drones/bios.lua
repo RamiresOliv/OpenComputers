@@ -7,22 +7,23 @@ Explain:
 
 This script will be like the main part for the drone to work, it is so important that if it is not present the drone will not turn on.
 Okay, but what is it anyway? The bios is where the drone system will act like "do" or "go" things like that.
+
 The Script is still under construction, many things will change!
 
-NO! USE the lua bios (default)
-is incompatible for drones! It is necessary to create a compatible bios.
+NEVER! USE lua bios (default)
+it is incompatible for drones! It is necessary to create a compatible bios.
 
-Sample code: https://gist.github.com/fnuecke/6bcbd66910b946b54ec7
-
-In this case, this script takes information sent or rather specific commands sent from Client.lua to bios via Network,
+In this case, this script takes information sent or specific commands sent from Client.lua to bios via Network,
 thus executing functions within the bios.
 
 Requirements:
-- Wireless Network Card - LVL1 or LVL2
+- Wireless network card - LVL1 or LVL2
 - EEPROM configured with this code.
-- FLASH for put this script inside the EEPROM.
+- FLASH to put this script inside the EEPROM.
 
-Tutorial in README.md on Drones!
+Sample code: https://gist.github.com/fnuecke/6bcbd66910b946b54ec7
+
+Tutorial at README.md on Drones!
 ]]
 
 local function proxyComp(name) return component.proxy(component.list(name)()) end
