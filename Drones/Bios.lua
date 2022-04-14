@@ -2,18 +2,10 @@ local function proxyComp(name) return component.proxy(component.list(name)()) en
 function Split(s, delimiter) result = {}; for match in (s..delimiter):gmatch("(.-)"..delimiter) do table.insert(result, tostring(match)); end return result; end
 local m = proxyComp("modem")
 local d = proxyComp("drone")
-
 local function returnMSG(msg) m.broadcast(2412, msg) end
+m.open(2412) -- Commands port
+local LAST_executation_result = { motive = "none", state = false, returnned = nil }
 
-m.open(2412) -- Port from the modem
-
-local LAST_executation_result = { -- VERY important
-    motive = "none";
-    state = false;
-    returnned = nil;
-}
-
--- Executing functions for... 4 commands lol.
 local function execute()
     while true do
         local event, _, _, _, _, cmd = computer.pullSignal()
@@ -22,7 +14,6 @@ local function execute()
             local Splitted_cmd = Split(cmd, " ")
             motive = "none"
             state = false
-
             if Splitted_cmd[1] == "move" or Splitted_cmd[1] == "mov" then
                 if Splitted_cmd[2] then
                     state = true
@@ -35,7 +26,6 @@ local function execute()
                     state = false
                     motive = "no secound argument..."
                 end
-
             elseif Splitted_cmd[1] == "setstatustext" or Splitted_cmd[1] == "sst" then
                 if Splitted_cmd[2] then
                     state = true
@@ -44,7 +34,6 @@ local function execute()
                     state = false
                     motive = "no secound argument..."
                 end
-
             elseif Splitted_cmd[1] == "setlightcolor" or Splitted_cmd[1] == "slc" then
                 if Splitted_cmd[2] then
                     state = true
@@ -53,11 +42,9 @@ local function execute()
                     state = false
                     motive = "no secound argument..."
                 end
-
             elseif Splitted_cmd[1] == "getlightcolor" then
                 state = true
                 LAST_executation_result.returnned = d.getLightColor()
-
             elseif Splitted_cmd[1] == "setacceleration" or Splitted_cmd[1] == "sa" then
                 if Splitted_cmd[2] then
                     state = true
@@ -66,12 +53,9 @@ local function execute()
                     state = false
                     motive = "no secound argument..."
                 end
-
-
             else
                 motive = "This command not exists!"
             end
-
             LAST_executation_result.motive = motive
             LAST_executation_result.state = state
             if motive ~= "none" then returnMSG(motive) end
