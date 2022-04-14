@@ -3,7 +3,7 @@ function Split(s, delimiter) result = {}; for match in (s..delimiter):gmatch("(.
 local m = proxyComp("modem")
 local d = proxyComp("drone")
 local function returnMSG(msg) m.broadcast(2412, msg) end
-m.open(2412) -- Commands port
+m.open(2412)
 local LAST_executation_result = { motive = "none", state = false, returnned = nil }
 
 local function execute()
