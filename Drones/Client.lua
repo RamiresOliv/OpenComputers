@@ -17,10 +17,10 @@ while true do
     if not command then return end
     if command:lower() == "clear" or command:lower() == "cls" then term.clear() else
         modem.broadcast(2412, command:lower()) -- Send Command to the Drone
-        local evt, _, _, _, _, msg = event.pull("modem_message")
+        local evt, _, _, _, _, msg = event.pull(3, "modem_message")
         if msg == "" or msg == nil then
             io.stderr:write("None Returns.\n")
-            print("Remember: if have so muth time to none returns? the port '2412' can be closed. Check the Drone and restart this script.")
+            print("Remember: too muth time to none returns? the port '2412' can be closed. Check the Drone and restart this script.")
         else
             print(msg)
         end
