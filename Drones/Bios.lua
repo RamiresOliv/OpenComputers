@@ -47,12 +47,12 @@ local function execute()
                     Last_exe_result.returnned = d.setAcceleration(tonumber(cmd[2]))
                 end
             elseif cmd[1] == "drop" then
-                Last_exe_result.returnned = d.drop(1, tonumber(cmd[2]))
+                Last_exe_result.returnned = d.drop(0, tonumber(cmd[2]))
             elseif cmd[1] == "suck" then
                 if cmd[2] then
                     state = true
                     if not cmd[3] then
-                        Last_exe_result.returnned = d.suck(1, tonumber(cmd[2]))
+                        Last_exe_result.returnned = d.suck(0, tonumber(cmd[2]))
                     else
                         Last_exe_result.returnned = d.suck(tonumber(cmd[2]), tonumber(cmd[3]))
                     end
