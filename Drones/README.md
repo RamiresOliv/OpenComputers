@@ -37,7 +37,7 @@ depois procure nesse path: `C:\Users\[Seu Nome]\AppData\Roaming\.minecraft\saves
 
 Agora você tera que achar seu computador nesse path.
 
-Depois você podera abrir a pasta do computador especifico que vocÊ deseja.
+Depois você podera abrir a pasta do computador especifico que você deseja.
 
 e pronto agora você tem seu computador no VSCODE :)
 
@@ -58,7 +58,7 @@ Usaremos o `Electronics Assembler`:
 
 ![unknown](https://cdn.discordapp.com/attachments/954776132497055835/964125611041902643/unknown.png)
 
-Agora use um Drone case de qualquer level que você preferir<br>
+Agora use um Drone case de qualquer tier que você preferir<br>
 vou esta usando o level 2<br>
 ![unknown](https://cdn.discordapp.com/attachments/954776132497055835/964126075066155021/unknown.png)
 
@@ -70,7 +70,7 @@ Vou estar usando essa config humilde
 
 ![image](https://user-images.githubusercontent.com/69019082/163383288-6fb296b3-938b-482f-b713-260c336f4c16.png)
 
-Essa EEPROM está vazia e tem que está vazia.!
+Essa EEPROM está vazia, tem que está vazia!
 
 agora coloque uma EEPROM vazia no computador 
 
@@ -112,7 +112,7 @@ e adicione ela ao drone:
 
 ![image](https://user-images.githubusercontent.com/69019082/163385479-4e05be5c-ec78-4234-a5ac-7c902eb92c13.png)
 
-Monteo apertando em Assemble...
+Monte-o apertando em Assemble...
 
 ![image](https://user-images.githubusercontent.com/69019082/163385575-08d5d7c4-531c-4404-b85d-a011606e427c.png)
 
@@ -122,7 +122,7 @@ Coloque no chão e ligue-o
 
 Caso tenha feito tudo corretamente o drone ira ligar
 
-mas agora vamos mandar comandos paara ele!
+mas agora vamos mandar comandos para ele!
 
 ## Client
 
@@ -159,6 +159,13 @@ setlightcolor
 ![image](https://user-images.githubusercontent.com/69019082/163386586-f8f95c75-d84e-4988-ad5c-c94f1d94a1dd.png)
 
 ![image](https://user-images.githubusercontent.com/69019082/163386567-0c0398a8-9312-4399-9d75-53f78705f434.png)
+
+### E pronto! :D
+
+Agora você tem um Drone funcional com configurações legais para usar!!<br>
+Só lembrando que você pode auterar o codigo de sua preferencia<br>
+Você pode estar usando o codigo pronto de exemplo.
+Gostou? é nois.
 
 # **📑🛠 Notas antigas**
 
