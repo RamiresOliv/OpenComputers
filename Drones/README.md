@@ -16,7 +16,7 @@ Documentação Oficial de [OpenComputers](https://ocdoc.cil.li)
 _MineCraft.versão: `1.12.2`_<br>
 _Projeto.versão: `0.3`_
 
-# Configurando o VSCODE junto com o OpenComputers
+# **Configurando o VSCODE junto com o OpenComputers**
 Vou usar o VSCODE então se você quizer também usar o VSCODE para editar codigos no OpenComputers você precisara configurar o OpenComputers!
 
 `C:\Users\[Seu Nome]\AppData\Roaming\.minecraft\config\opencomputers\settings.conf` Esse path é o local de configuração do OpenComputers onde fica Tuuuuuuuuuudo do OpenComputers mas você ira atras de uma em especifico.
@@ -52,7 +52,7 @@ Você **PRECISA** saber disso:
 2. Não vou mostrar como que faz por exemplo um PC
 3. Só vou mostrar os materiais
 
-# 🔨 Fazendo um drone
+# **🔨 Fazendo um drone**
 
 Usaremos o `Electronics Assembler`:
 
@@ -160,7 +160,7 @@ setlightcolor
 
 ![image](https://user-images.githubusercontent.com/69019082/163386567-0c0398a8-9312-4399-9d75-53f78705f434.png)
 
-# 📑🛠 Notas antigas
+# **📑🛠 Notas antigas**
 
 ## AVISO MUUUUUUUUUITO IMPORTANTE:
 Talvez coisas faladas sobre essas notas ESTEJAM DESATUALIZADAS!
@@ -201,7 +201,7 @@ Client.lua envia a informação via Network para a bios remotamente,
 por isso é necessário usar este script em um computador com um Wireless Network Card LVL1 ou LVL2
 ```
 
-# 🗿 Terminando
+# **🗿 Terminando**
 
 espero que tenha gostado fiz isso ja faz uns 3 dias :)
 
