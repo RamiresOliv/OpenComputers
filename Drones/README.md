@@ -4,6 +4,8 @@
 
 > Bora fazer Drones?
 
+Oque tenho a dizer é 👌😎
+
 Sumario:
 - [Como conectar o VSCODE em um computador no OpenComputers](#configurando-o-vscode-junto-com-o-opencomputers)
 - [Como fazer e configurar um drone](#como-fazer-e-configurar-um-drone)
