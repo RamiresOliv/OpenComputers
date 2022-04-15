@@ -10,5 +10,5 @@ Simples Sumario:<br>
 
 Mod OpenComputers: <a href="https://www.curseforge.com/minecraft/mc-mods/opencomputers">CurseForge - OpenComputers</a><br>
 Repositorio ORIGINAL: <a href="https://github.com/MightyPirates/OpenComputers">MightyPirates/OpenComputers</a><br>
-<i>Versão 1.12.2</i>
+<i>MC Versão 1.12.2</i>
 <h1 align="center">💻 OpenComputers 🛠</h1>
