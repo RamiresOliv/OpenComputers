@@ -9,6 +9,7 @@ local event = require("event")
 local term = require("term")
 local modem = component.modem
 modem.open(2412)
+print("[ Client and Bios 0.3v ]")
 print("Warning: for no give errors you can use the commands like: 'move 0,3,0' with NO SPACES,\nif you put spaces the script can't read it.\n")
 
 
