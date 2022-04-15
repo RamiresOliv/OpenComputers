@@ -49,7 +49,7 @@ Você **PRECISA** saber disso:
 2. Não vou mostrar como que faz por exemplo um PC
 3. Só vou mostrar os materiais
 
-# Fazendo um drone
+## 🎛 Fazendo um drone 🎛
 
 Usaremos o `Electronics Assembler`:
 
@@ -63,7 +63,7 @@ Vou estar usando essa config humilde
 
 ![unknown](https://cdn.discordapp.com/attachments/954776132497055835/964126556391870524/unknown.png)
 
-## Configurando uma EEPROM
+# Configurando uma EEPROM
 
 ![image](https://user-images.githubusercontent.com/69019082/163383288-6fb296b3-938b-482f-b713-260c336f4c16.png)
 
@@ -121,7 +121,7 @@ Caso tenha feito tudo corretamente o drone ira ligar
 
 mas agora vamos mandar comandos paara ele!
 
-## Client
+# Client
 
 **Ei ei! Sou eu denovo com uma Super dica:** caso você tenha uma internet card em seu compudor no Minecraft você pode usar esse comando para facilitar as coisas `wget https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/Client.lua /home/Client.lua` ele ira cirar um arquivo ja com tudo que você precisa sem precisar criar e configurar.
 
@@ -157,13 +157,13 @@ setlightcolor
 
 ![image](https://user-images.githubusercontent.com/69019082/163386567-0c0398a8-9312-4399-9d75-53f78705f434.png)
 
-# Notas antigas
+## 📑 Notas antigas 📑
 
-## AVISO MUUUUUUUUUITO IMPORTANTE:
+# AVISO MUUUUUUUUUITO IMPORTANTE:
 Talvez coisas faladas sobre essas notas ESTEJAM DESATUALIZADAS!
 então pode ter algumas coisas que não tem nada a ver com hoje em dia.
 
-## Bios
+# Bios
 
 ```
 SOBRE BIOS ANTIGA:
@@ -188,7 +188,7 @@ Requisitos:
 - FLASH para colocar este script dentro da EEPROM.
 Código de exemplo: https://gist.github.com/fnuecke/6bcbd66910b946b54ec7
 ```
-## Client
+# Client
 
 ```
 SOBRE CLIENT ANTIGA:
@@ -198,7 +198,7 @@ Client.lua envia a informação via Network para a bios remotamente,
 por isso é necessário usar este script em um computador com um Wireless Network Card LVL1 ou LVL2
 ```
 
-# Terminando
+## 🖨 Terminando 🖨
 
 espero que tenha gostado fiz isso ja faz uns 3 dias :)
 
