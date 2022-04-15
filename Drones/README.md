@@ -13,7 +13,8 @@ Sumario:
 Por: Gabriel Ramires<br>
 Documentação Oficial de [OpenComputers](https://ocdoc.cil.li)
 
-_versão: 1.12.2_
+_MineCraft.versão: `1.12.2`_<br>
+_Projeto.versão: `0.3`_
 
 # Configurando o VSCODE junto com o OpenComputers
 Vou usar o VSCODE então se você quizer também usar o VSCODE para editar codigos no OpenComputers você precisara configurar o OpenComputers!
