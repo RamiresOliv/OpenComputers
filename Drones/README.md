@@ -1,14 +1,14 @@
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
 <h1 align="center">🧰 Drones 🛠</h1><p align="center">Bora fazer Drones?</p>
 
-<h2 align="center">Novo update, <a href="Updates.md">v0.4</a> saiu! 👌😎</h2>
+<h2 align="center">Novo update, <a href="Updates#-0016-16042022-v04">v0.4</a> saiu! 👌😎</h2>
 
 **Sumario:**<br>
 - [Como conectar o VSCODE em um computador no OpenComputers](#configurando-o-vscode-junto-com-o-opencomputers)
 - [Como fazer e configurar um drone](#como-fazer-e-configurar-um-drone)
 
 **Paginas:**<br>
-- [Updates](Updates.md)
+- [Updates](Updates)
 <br><br>
 _MineCraft.versão: `1.12.2`_<br>
 _Projeto.versão: `0.3`_
