@@ -1,8 +1,9 @@
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
 <h1 align="center">🧰 Drones 🛠</h1>
 
-
 > Bora fazer Drones?
+
+## `16/04/2022` Novo update, [V0.4](Updates) saiu!
 
 Oque tenho a dizer é 👌😎
 
