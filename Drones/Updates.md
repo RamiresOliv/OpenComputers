@@ -21,7 +21,8 @@ News:<br>
   + drop EX: `drop 64`
   + suck EX: `suck 0 64`
   + help EX: `help/h`
-  Nota: para mostrar melhor oque cada comando desses fazem é só usar o comando `help`
+
+  **Nota: para mostrar melhor oque cada comando desses fazem é só usar o comando `help`**
 
 ### 3. Comando de ajuda! 'help'
   ![image](https://user-images.githubusercontent.com/69019082/163658869-f4ef19fd-f76f-49c7-a1cd-36f5277d98f2.png)
