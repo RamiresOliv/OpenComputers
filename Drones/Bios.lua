@@ -27,14 +27,14 @@ local function execute()
                 exec.Return = d.selectTank(tonumber(cmd[2]))
             elseif cmd[1] == "tanklevel" or cmd[1] == "tl" then exec.state = true
                 exec.Return = d.tankLevel(tonumber(cmd[2]))
-            elseif cmd[1] == "drain" then
+            elseif cmd[1] == "drain" then if cmd[3] == "all" then cmd[3] = 16000 end
                 if cmd[2] then exec.Return = d.drain(tonumber(cmd[2]), tonumber(cmd[3])) exec.state = true else exec.motive="No 2 args" end
-            elseif cmd[1] == "fill" then
+            elseif cmd[1] == "fill" then if cmd[3] == "all" then cmd[3] = 16000 end
                 if cmd[2] then exec.Return = d.fill(tonumber(cmd[2]), tonumber(cmd[3])) exec.state = true else exec.motive="No 2 args" end
             elseif cmd[1] == "drop" then
-                if cmd[2] then exec.state = true if not cmd[3] then exec.Return = d.drop(0, tonumber(cmd[2])) else exec.Return = d.drop(tonumber(cmd[2]), tonumber(cmd[3])) end else exec.motive="No 2 args" end
+                if cmd[2] then exec.state = true exec.Return = d.drop(tonumber(cmd[2]), tonumber((cmd[3] or 64))) else exec.motive="No 2 args" end
             elseif cmd[1] == "suck" then
-                if cmd[2] then exec.state = true if not cmd[3] then exec.Return = d.suck(0, tonumber(cmd[2])) else exec.Return = d.suck(tonumber(cmd[2]), tonumber(cmd[3])) end else exec.motive="No 2 args" end
+                if cmd[2] then exec.state = true exec.Return = d.suck(tonumber(cmd[2]), tonumber((cmd[3] or 64))) else exec.motive="No 2 args" end
             elseif cmd[1] == "shutdown" then exec.state = true Send("Drone Shutdownned port '2412' closed.. Bye")
                 exec.Return = computer.shutdown()
             elseif cmd[1] == "select" then exec.state = true
