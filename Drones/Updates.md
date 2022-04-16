@@ -1,23 +1,26 @@
-# Updates CHOCANTE!
-
-> less go
-
-# Updates Log
+# Logs de updates
+> less go<br>
 > Todos os updates
 
-## V0.4:
+Os uptades estão sendo catalogados da V0.4 para cima.<br>
+Pois não foi possivel catalogar a versão `0.1`, `0.2` ou `0.3`.
+
+
+---
+
+## `00:16 16/04/2022` V0.4:
 
 News:<br>
 ### 1. Mais comandos foram adicionados padronicamente na bios.
   + name EX: `name`
-  + selecttank EX: `selecttank 1`
-  + tanklevel EX: `tanklevel`
-  + drain `selecttank 0 3000`
-  + fill `fill 0 3000`
-  + select `select 1`
-  + drop
-  + help
-  + suck
+  + selecttank EX: `selecttank/ 1`
+  + tanklevel EX: `tanklevel/tl`
+  + drain EX: `drain 0 3000`
+  + fill EX: `fill 0 3000`
+  + select EX: `select 1`
+  + drop EX: `drop 64`
+  + suck EX: `suck 0 64`
+  + help EX: `help/h`
   Nota: para mostrar melhor oque cada comando desses fazem é só usar o comando `help`
 
 ### 3. Comando de ajuda! 'help'
