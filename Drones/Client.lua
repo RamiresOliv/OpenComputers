@@ -3,11 +3,15 @@ version = 0.4
 Ports = { receive = 2412; send = 2412; }
 Commands_File = "commands.conf"
 
+-- Auto Configs
 function Split(s, del) out = {}; for match in (s..del):gmatch("(.-)"..del) do table.insert(out, tostring(match)); end return out; end
 local component = require("component")
 local event = require("event")
 local term = require("term")
 local modem = component.modem
+local gpu = component.gpu
+commands_color = "0xFFFFFF"
+
 function Start()
     print("[ Client and Bios " .. tostring(version) .. "v ]")
     print("Warning: for no give errors you can use the commands like: 'move 0,3,0' with NO SPACES,\nif you put spaces the script can't read it.\n")
@@ -16,17 +20,17 @@ end
 Start()
 modem.open(Ports.receive)
 
-modem.broadcast(Ports.send, "setlightcolor 0x00FFFF")
+modem.broadcast(Ports.send, "setlightcolor 0x8A2BE2") commands_color = "0x8A2BE2"
 
 --[[
     No change here! find a file default name "commands.conf" for edit or add commands! for appear on the client.
     and rememeber to put %& at the end for no give errors!!!
 ]] 
 local PRE_Commands={
-    move="move the drone from any positions with comnbinations EX: mov east/west up/down north/south$&",
+    move="move the drone from any positions with combinations EX: mov east/west up/down north/south$&",
     setstatustext="Set a new status from the drone.$&",
     setacceleration ="Set acceleration from the drone.$&",
-    setlightcolor="Set the light color from the drone in type RRGGBB EX: '0xFF0000'$&",
+    setlightcolor="Set the light color from the drone in the format RRGGBB EX: '0xFF0000'$&",
     getlightcolor="Return the current light color EX: '0xFF0000'$&",
     name="Returns the Drone name.$&",
     selecttank="Select any space in the fluid tanks, the max of tanks its 4.$&",
@@ -63,11 +67,14 @@ local function Help()
     file:close()
     for i, v in pairs(require("serialization").unserialize(result)) do
         io.write("\n")
-        io.stderr:write("'" .. i .. "'")
+        gpu.setForeground(tonumber(commands_color))
+        
+        io.write("'" .. i .. "'")
+        gpu.setForeground(0xFFFFFF)
         io.write(" - ")
         io.write(v)
     end
-    print("Yes, you can change the commands and add news commands!")
+    print("\nYes, you can change the commands and add news commands!")
 end
 
 while true do
@@ -76,7 +83,7 @@ while true do
     if not command then return end
     if command:lower() == "clear" or command:lower() == "cls" then term.clear() elseif command:lower() == "help" or command:lower() == "h" then Help() else
         Splitted = Split(command, " ")
-        if Splitted[1]:lower() == "sleep" then io.write("> ") command = io.read() os.sleep(tonumber(Splitted[2])) end
+        if Splitted[1]:lower() == "sleep" then io.write("> ") command = io.read() os.sleep(tonumber(Splitted[2])) elseif Splitted[1]:lower() == "setlightcolor" or Splitted[1]:lower() == "slc" then commands_color = Splitted[2] end
         modem.broadcast(Ports.send, command:lower()) -- Send Command to the Drone
         local evt, _, _, _, _, msg = event.pull(3, "modem_message")
         if msg == "" or msg == nil then
