@@ -11,7 +11,6 @@ Pois não foi possivel catalogar a versão `0.1`, `0.2` ou `0.3`.
 
 <h2 align="center">📑 00:16 16/04/2022 V0.4:</h2>
 
-News:<br>
 ### 1. Mais comandos foram adicionados padronicamente na bios.
   + name EX: `name`
   + selecttank EX: `selecttank/ 1`
