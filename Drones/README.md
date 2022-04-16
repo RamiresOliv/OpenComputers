@@ -3,7 +3,7 @@
 
 > Bora fazer Drones?
 
-## `16/04/2022` Novo update, [V0.4](Updates) saiu!
+## `16/04/2022` Novo update, [V0.4](Updates.md) saiu!
 
 Oque tenho a dizer é 👌😎
 
