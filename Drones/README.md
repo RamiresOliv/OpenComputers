@@ -1,9 +1,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
-<h1 align="center">🧰 Drones 🛠</h1>
+<h1 align="center">🧰 Drones 🛠</h1><p align="center">Bora fazer Drones?</p>
 
-> Bora fazer Drones?
-
-## `16/04/2022` Novo update, [V0.4](Updates.md) saiu!
+<h2 align="center">Novo update, <a href="Updates.md">v0.4</a> saiu!</h2>
 
 Oque tenho a dizer é 👌😎
 
