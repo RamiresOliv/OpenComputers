@@ -8,6 +8,9 @@ Pois não foi possivel catalogar a versão `0.1`, `0.2` ou `0.3`.
 
 
 ---
+<h2 align="center">📑 DEV 00:00 --/--/---- V0.5:</h2>
+<p align="center">type: ALPHA</p><br>
+<p align="center">In dev ;)</p>
 
 <h2 align="center">📑 00:16 16/04/2022 V0.4:</h2>
 <p align="center">type: ALPHA</p>
@@ -51,4 +54,3 @@ Pois não foi possivel catalogar a versão `0.1`, `0.2` ou `0.3`.
     Usando essa nova ferramenta você pode usar no console `sleep [tempo]` e depois digitar o comando.<br>
     Ao usar essa ferramenta o evento definido vai ser executado após o tempo que foi colocado no `sleep`<br>
     Tome cuidado para não colocar tipo... `sleep 999999991` que pode não dar bom resultados.<br>
-
