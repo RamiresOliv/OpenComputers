@@ -17,16 +17,8 @@ local function execute()
                 if cmd[2] then exec.Return = d.setStatusText(cmd[2]) exec.state = true else exec.motive="No 2 args" end
             elseif cmd[1] == "setlightcolor" or cmd[1] == "slc" then
                 if cmd[2] then exec.Return = d.setLightColor(tonumber(cmd[2])) exec.state = true else exec.motive="No 2 args"  end
-            elseif cmd[1] == "getlightcolor" then exec.state = true
-                exec.Return = d.getLightColor()
-            elseif cmd[1] == "name" then exec.state = true
-                exec.Return = d.name()
             elseif cmd[1] == "setacceleration" or cmd[1] == "sa" then
                 if cmd[2] then exec.Return = d.setAcceleration(tonumber(cmd[2])) exec.state = true else exec.motive="No 2 args" end
-            elseif cmd[1] == "selecttank" or cmd[1] == "st" then exec.state = true
-                exec.Return = d.selectTank(tonumber(cmd[2]))
-            elseif cmd[1] == "tanklevel" or cmd[1] == "tl" then exec.state = true
-                exec.Return = d.tankLevel(tonumber(cmd[2]))
             elseif cmd[1] == "drain" then if cmd[3] == "all" then cmd[3] = 16000 end
                 if cmd[2] then exec.Return = d.drain(tonumber(cmd[2]), tonumber(cmd[3])) exec.state = true else exec.motive="No 2 args" end
             elseif cmd[1] == "fill" then if cmd[3] == "all" then cmd[3] = 16000 end
@@ -35,10 +27,18 @@ local function execute()
                 if cmd[2] then exec.state = true exec.Return = d.drop(tonumber(cmd[2]), tonumber((cmd[3] or 64))) else exec.motive="No 2 args" end
             elseif cmd[1] == "suck" then
                 if cmd[2] then exec.state = true exec.Return = d.suck(tonumber(cmd[2]), tonumber((cmd[3] or 64))) else exec.motive="No 2 args" end
-            elseif cmd[1] == "shutdown" then exec.state = true Send("Drone Shutdownned port '2412' closed.. Bye")
-                exec.Return = computer.shutdown()
             elseif cmd[1] == "select" then exec.state = true
                 exec.Return = d.select(tonumber(cmd[2]))
+            elseif cmd[1] == "selecttank" or cmd[1] == "st" then exec.state = true
+                exec.Return = d.selectTank(tonumber(cmd[2]))
+            elseif cmd[1] == "tanklevel" or cmd[1] == "tl" then exec.state = true
+                exec.Return = d.tankLevel(tonumber(cmd[2]))
+            elseif cmd[1] == "getlightcolor" then exec.state = true
+                exec.Return = d.getLightColor()
+            elseif cmd[1] == "name" then exec.state = true
+                exec.Return = d.name()
+            elseif cmd[1] == "shutdown" then exec.state = true Send("Drone Shutdownned port '2412' closed.. Bye")
+                exec.Return = computer.shutdown()
             else
                 exec.motive = "This command not exists"
             end
