@@ -14,8 +14,8 @@ commands_color = "0xFFFFFF"
 
 function Start()
     print("[ Client and Bios " .. tostring(version) .. "v ]")
-    print("Warning: for no give errors you can use the commands like: 'move 0,3,0' with NO SPACES,\nif you put spaces the script can't read it.\n")
-end 
+    print("New update! now with SPACES!! like: 'move 0 3 0'!!\n")
+end
 
 Start()
 modem.open(Ports.receive)
