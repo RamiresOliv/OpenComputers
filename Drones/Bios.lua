@@ -49,7 +49,7 @@ local function execute()
         end
     end
 end
-while true do local success,reason = pcall(function() local result, cmd = execute()
+while true do local success,reason=pcall(function() local result,cmd=execute()
     if not result.state then Send(cmd .. "> ERROR: Not Success\nReturn: " .. tostring(result.motive)) else Send("Return: " .. tostring(result.Return)) end end)
-    if not success then Send(reason) end
+    if not success then Send(reason)end
 end
