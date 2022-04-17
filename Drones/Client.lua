@@ -20,7 +20,7 @@ end
 Start()
 modem.open(Ports.receive)
 
-modem.broadcast(Ports.send, "setlightcolor 0x8A2BE2") commands_color = "0x8A2BE2"
+modem.broadcast(Ports.send, "setlightcolor 0x581B95") commands_color = "0x581B95"
 
 --[[
     No change here! find a file default name "commands.conf" for edit or add commands! for appear on the client.
