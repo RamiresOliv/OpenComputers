@@ -1,16 +1,16 @@
-local function proxyComp(name) return component.proxy(component.list(name)()) end
-function Split(s, del) out = {}; for match in (s..del):gmatch("(.-)"..del) do table.insert(out, tostring(match)); end return out; end
-local m = proxyComp("modem")
-local d = proxyComp("drone")
-local function Send(msg) m.broadcast(2412, msg) end
+local function proxyComp(name)return component.proxy(component.list(name)())end
+function Split(s,del) out={};for match in (s..del):gmatch("(.-)"..del) do table.insert(out,tostring(match)); end return out;end
+local m=proxyComp("modem")
+local d=proxyComp("drone")
+local function Send(msg)m.broadcast(2412, msg)end
 m.open(2412)
 
 local function execute()
     while true do
-        local evt, _, _, _, _, cmd_all = computer.pullSignal()
-        if evt == "modem_message" then
-            local exec = { motive = "none", state = false, Return = nil }
-            local cmd = Split(cmd_all, " ")
+        local evt,_,_,_,_,cmd_all=computer.pullSignal()
+        if evt=="modem_message" then
+            local exec= { motive = "none", state = false, Return = nil }
+            local cmd= Split(cmd_all, " ")
             if cmd[1] == "move" or cmd[1] == "mov" then
                 if cmd[2] then Args = Split(cmd[2], ",") exec.Return = d.move((tonumber(cmd[2]) or 0), (tonumber(cmd[3]) or 0), (tonumber(cmd[4]) or 0)) exec.state = true else exec.motive="No args" end
             elseif cmd[1] == "setstatustext" or cmd[1] == "sst" then
@@ -27,7 +27,9 @@ local function execute()
                 if cmd[2] then exec.state = true exec.Return = d.drop(tonumber(cmd[2]), tonumber((cmd[3] or 64))) else exec.motive="No 2 args" end
             elseif cmd[1] == "suck" then
                 if cmd[2] then exec.state = true exec.Return = d.suck(tonumber(cmd[2]), tonumber((cmd[3] or 64))) else exec.motive="No 2 args" end
-            elseif cmd[1] == "select" then exec.state = true
+            elseif cmd[1] == "place" then
+                if cmd[2] then exec.state = true exec.Return = d.place(tonumber(cmd[2]), tonumber((cmd[3] or false))) else exec.motive="No 2 args" end
+            elseif cmd[1] == "place" then exec.state = true
                 exec.Return = d.select(tonumber(cmd[2]))
             elseif cmd[1] == "selecttank" or cmd[1] == "st" then exec.state = true
                 exec.Return = d.selectTank(tonumber(cmd[2]))
@@ -47,13 +49,7 @@ local function execute()
         end
     end
 end
-
-while true do
-    local success, reason = pcall(function()
-        local result, cmd = execute()
-        if not result.state then Send(cmd .. "> ERROR: Not Success\nReturn: " .. tostring(result.motive)) 
-        else Send("Return: " .. tostring(result.Return))
-        end
-    end)
+while true do local success,reason = pcall(function() local result, cmd = execute()
+    if not result.state then Send(cmd .. "> ERROR: Not Success\nReturn: " .. tostring(result.motive)) else Send("Return: " .. tostring(result.Return)) end end)
     if not success then Send(reason) end
 end
