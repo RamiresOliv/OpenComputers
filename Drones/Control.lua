@@ -1,18 +1,3 @@
---[[
-No want use the VSCODE or don't know?
-No problems!
-wit this new file you can use it for download to you the files!!!!
-what i need to to?
-Simple just use this command:
-"wget https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/Control.lua Control.lua"
-
-and after you use:
-"Control"
-on in the shell.
-and he gona execute all to you REALLY more fastness!
-]]
-
-
 local component = require("component")
 local internet = require("internet")
 local shell = require("shell")
