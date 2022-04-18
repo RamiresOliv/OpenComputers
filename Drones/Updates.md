@@ -6,6 +6,9 @@
 Os uptades estão sendo catalogados da V0.4 para cima.<br>
 Pois não foi possivel catalogar a versão `0.1`, `0.2` ou `0.3`.
 
+### Registrados:
+  - [0.5.0](#-2112-17042022-v050)
+  - [0.4.0](#-2112-17042022-v050)
 
 ---
 <h2 align="center">📑 21:12 17/04/2022 V0.5.0:</h2>
