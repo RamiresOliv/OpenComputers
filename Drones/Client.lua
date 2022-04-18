@@ -6,7 +6,7 @@ Mas caso o comando seja help, cls ou sleep são calculados aqui na propria Clien
 ]]
 
 -- Open Configs
-version = 0.5.0
+version = "0.5.0"
 Ports = { receive = 2412; send = 2412; }
 Commands_File = "commands.conf"
 
@@ -21,7 +21,7 @@ local gpu = component.gpu
 commands_color = "0xFFFFFF"
 
 function Start()
-    print("[ Client and Bios " .. tostring(version) .. "v ]")
+    print("[ Client and Bios " .. version .. "v ]")
     print("New update! now with SPACES!! like: 'move 0 3 0'!!\n")
 end
 
