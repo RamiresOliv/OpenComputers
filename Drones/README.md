@@ -1,7 +1,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
 <h1 align="center">🧰 Drones 🛠</h1><p align="center">Bora fazer Drones?</p>
 
-### **Novo update**, [v0.5](Updates.md) saindo?! 👌😳
+### **Novo update**, [v0.5.0](Updates.md) Saiu! 👌🥱
 
 **Sumario:**<br>
 - [Como conectar o VSCODE em um computador no OpenComputers](#configurando-o-vscode-junto-com-o-opencomputers)
