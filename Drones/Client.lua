@@ -1,6 +1,13 @@
+--[[
+Bem, é o seguinte esse script pega oso comandos envidos pelo prommpt e envia via Network wireless para a Bios.
+Mas caso o comando seja help, cls ou sleep são calculados aqui na propria Client.
+
+92: if command:lower() == "clear" or command:lower() == "cls" then term.clear() elseif command:lower() == "help" or command:lower() == "h"
+]]
+
 -- Open Configs
 version = 0.4
-Ports = { receive = 2412; send = 2412; }
+Ports = {receive = 2412; send = 2412;}
 Commands_File = "commands.conf"
 
 -- Auto Configs
