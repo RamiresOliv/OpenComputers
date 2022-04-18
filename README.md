@@ -3,6 +3,9 @@
 
 ### **VERSÃO TESTE!**
 
+MUITAS mas MUUUUUITAS coisas podem estar desatualizada nessa branch!!<br>
+Mas aqui você pode ver testes sendo feitos.
+
 > Aqui tem algumas coisas simples que estou fazendo para ser usado no OpenComputers
 
 **NÃO SOU O CRIADOR ORIGINAL DE OPENCOMPUTERS!**<br>
