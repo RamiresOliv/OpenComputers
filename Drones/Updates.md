@@ -14,7 +14,7 @@ Pois não foi possivel catalogar a versão `0.1`, `0.2` ou `0.3`.
 <h2 align="center">📑 21:12 17/04/2022 V0.5.0:</h2>
 <p align="center">type: ALPHA</p><br>
 
-### 1. Agora tem uma pequena sincronização com a cor do drone e as cores dos comandos
+### 1. Agora existe uma pequena sincronização com a cor do drone e as cores dos comandos
 
 ![image](https://user-images.githubusercontent.com/69019082/163737134-a1e39a42-3261-4c71-a4ce-7be6d0ccb891.png)
 
