@@ -1,4 +1,4 @@
-{
+'''{
   move = function(arg2, arg3, arg4) if arg2 then exec.out = d.move((tonumber(arg2) or 0), (tonumber(arg3) or 0), (tonumber(arg4) or 0)) exec.state = true else exec.motive="No args" end end,
   setstatustext = function(arg2, arg3, arg4) if arg2 then exec.out = d.setStatusText(arg2) exec.state = true else exec.motive="No 2 args" end end,
   setacceleration = function(arg2, arg3, arg4) if arg2 then exec.out = d.setLightColor(tonumber(arg2)) exec.state = true else exec.motive="No 2 args" end end,
@@ -14,4 +14,4 @@
   getlightcolor = function(arg2, arg3, arg4) exec.out = d.getLightColor() end,
   name = function(arg2, arg3, arg4) exec.out = d.name() end,
   shutdown = function(arg2, arg3, arg4) exec.out = computer.shutdown()) end
-}
+}'''
