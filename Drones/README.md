@@ -11,7 +11,7 @@
 - [Updates](Updates)
 <br><br>
 _MineCraft.versão: `1.12.2`_<br>
-_Projeto.versão: `0.3`_
+_Projeto.versão: `0.5.0`_
 
 Por: Gabriel Ramires<br>
 Documentação Oficial de [OpenComputers](https://ocdoc.cil.li)
