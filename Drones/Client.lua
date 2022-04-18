@@ -7,7 +7,7 @@ Mas caso o comando seja help, cls ou sleep são calculados aqui na propria Clien
 
 -- Open Configs
 version = 0.4
-Ports = {receive = 2412; send = 2412;}
+Ports = {receive = 2274; send = 2274;}
 Commands_File = "commands.conf"
 
 -- Auto Configs
