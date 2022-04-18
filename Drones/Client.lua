@@ -6,8 +6,8 @@ Mas caso o comando seja help, cls ou sleep são calculados aqui na propria Clien
 ]]
 
 -- Open Configs
-version = 0.5
-Ports = {receive = 2274; send = 2274;}
+version = 0.5.0
+Ports = { receive = 2412; send = 2412; }
 Commands_File = "commands.conf"
 
 -- Auto Configs
@@ -47,6 +47,7 @@ local PRE_Commands={
     fill="Fill any liquid from world or inventory/tanks in the sides 1 at 5.$&",
     select="Select any space in the inventory from the drone, the max of tanks its 4.$&",
     drop="Drops itens in slected inventory slot from the drone, the max of tanks its 4.$&",
+    place="Place any blocks in selected slot from the Drone.$&",
     suck="Sucks any item in any directions or inventorys with a direction 1 at 5. And the Drone try to put in emmpty space, if can't returns false or else true.$&",
     shutdown = "Turn off the Current drone.$&"
 }
