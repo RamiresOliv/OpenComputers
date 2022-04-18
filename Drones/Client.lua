@@ -47,8 +47,8 @@ local PRE_Commands={
     fill="Fill any liquid from world or inventory/tanks in the sides 1 at 5.$&",
     select="Select any space in the inventory from the drone, the max of tanks its 4.$&",
     drop="Drops itens in slected inventory slot from the drone, the max of tanks its 4.$&",
-    place="Place any blocks in selected slot from the Drone.$&",
-    suck="Sucks any item in any directions or inventorys with a direction 1 at 5. And the Drone try to put in emmpty space, if can't returns false or else true.$&",
+    place="Place any block in selected slot from the Drone. On Directions 1 at 6$&",
+    suck="Sucks any item in any directions or inventorys with a direction 1 at 6. And the Drone try to put in emmpty space, if can't returns false or else true.$&",
     shutdown = "Turn off the Current drone.$&"
 }
 Check_Commands_File_Existence = function()
