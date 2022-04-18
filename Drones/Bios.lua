@@ -2,8 +2,8 @@ local function proxyComp(name)return component.proxy(component.list(name)())end
 function Split(s,del) out={};for match in(s..del):gmatch("(.-)"..del)do;able.insert(out,tostring(match));end return out;end
 local m=proxyComp("modem")
 local d=proxyComp("drone")
-local function Send(msg)m.broadcast(2412,msg)end
-m.open(2412)
+local function Send(msg)m.broadcast(2274,msg)end
+m.open(2274)
 
 local function exe()
     while true do
