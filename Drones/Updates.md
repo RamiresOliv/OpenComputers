@@ -14,29 +14,29 @@ Pois não foi possivel catalogar a versão `0.1`, `0.2` ou `0.3`.
 <h2 align="center">📑 21:12 17/04/2022 V0.5.0:</h2>
 <p align="center">type: ALPHA</p><br>
 
-### 1. Agora existe uma pequena sincronização com a cor do drone e as cores dos comandos
+### 1. ADDED Agora existe uma pequena sincronização com a cor do drone e as cores dos comandos
 
 ![image](https://user-images.githubusercontent.com/69019082/163737134-a1e39a42-3261-4c71-a4ce-7be6d0ccb891.png)
 
-### 2. Mais um comando foi adicionados padronicamente na bios.
+### 2. ADDED Mais um comando foi adicionados padronicamente na bios.
 
 `[]` = `Necessario`<br>
 `()` = `Não necessario`
 
   + place EX: `place [DIREÇÃO 0 até 6] (SORRATEIRAMENTE true ou false)`
 
-### 3. Bios mais optimizada
+### 3. CHANGE Bios mais optimizada
 
 agora a bios está com variaveis menores e compactas para que alterações por vocês ou eventualmente sejam possivels. O total seria de 
 
-### 4. Aquivo Novo chamado de Control.lua
+### 4. _external_/ADDED Aquivo Novo chamado de Control.lua
 
 Esse arquivo faz download dos 2 arquivos Bios e Client automaticamente.<br>
 Muito util para quem odeio ficar copiando e colando codigo agora é só usar `wget https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/Control.lua Control.lua`.<br>
 Para usar essa função é necessario usar uma Internet Card.<br>
 Em fim ela faz download para você os arquivos.
 
-### 5. Troca de port
+### 5. ADDED Troca de port
 
 Agora tanto a port do Client e da Bios foi trocada para `2412`<br>
 É possivel mudar caso não queira, só lembre-se de mudar as portas como<br>
