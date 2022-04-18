@@ -7,7 +7,7 @@ m.open(2412)
 
 local function exe()
     while true do
-        local evt,_,_,_,_,cmd_all= computer.pullSignal()
+        local evt,_,_,_,_,cmd,arg1,arg2,arg3,arg4= computer.pullSignal()
         if evt== "modem_message" then
             local exec= {motive= "none", state= false, out= nil}
             local cmd= Split(cmd_all, " ")
