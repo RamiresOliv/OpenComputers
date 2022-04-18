@@ -1,15 +1,15 @@
 local function proxyComp(name)return component.proxy(component.list(name)())end
-function Split(s,del) out={};for match in(s..del):gmatch("(.-)"..del)do;able.insert(out,tostring(match));end return out;end
+function Split(s,del)out={};for match in(s..del):gmatch("(.-)"..del)do;table.insert(out,tostring(match));end return out;end
 local m=proxyComp("modem")
 local d=proxyComp("drone")
-local function Send(msg)m.broadcast(2274,msg)end
-m.open(2274)
+local function Send(msg)m.broadcast(2412,msg)end
+m.open(2412)
 
 local function exe()
     while true do
         local evt,_,_,_,_,cmd_all= computer.pullSignal()
         if evt== "modem_message" then
-            local exec= { motive= "none", state= false, out= nil }
+            local exec= {motive= "none", state= false, out= nil}
             local cmd= Split(cmd_all, " ")
             if cmd[1] == "move" or cmd[1] == "mov" then
                 if cmd[2] then Args = Split(cmd[2], ",") exec.out = d.move((tonumber(cmd[2]) or 0), (tonumber(cmd[3]) or 0), (tonumber(cmd[4]) or 0)) exec.state = true else exec.motive="No args" end
@@ -29,7 +29,7 @@ local function exe()
                 if cmd[2] then exec.state = true exec.out = d.suck(tonumber(cmd[2]), tonumber((cmd[3] or 64))) else exec.motive="No 2 args" end
             elseif cmd[1] == "place" then
                 if cmd[2] then exec.state = true exec.out = d.place(tonumber(cmd[2]), tonumber((cmd[3] or false))) else exec.motive="No 2 args" end
-            elseif cmd[1] == "place" then exec.state = true
+            elseif cmd[1] == "select" then exec.state = true
                 exec.out = d.select(tonumber(cmd[2]))
             elseif cmd[1] == "selecttank" or cmd[1] == "st" then exec.state = true
                 exec.out = d.selectTank(tonumber(cmd[2]))
@@ -50,6 +50,6 @@ local function exe()
     end
 end
 while true do local succ,reason= pcall(function() local rt, cmd=exe()
-    if not result.state then Send("ERROR: Not Success in ".. cmd .."\nReturn: ".. tostring(rt.motive)) else Send("Return: ".. tostring(rt.out)) end end)
+    if not rt.state then Send("ERROR: Not Success in ".. cmd .."\nReturn: ".. tostring(rt.motive)) else Send("Return: ".. tostring(rt.out)) end end)
     if not succ then Send(reason)end
 end
