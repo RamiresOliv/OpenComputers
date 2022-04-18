@@ -8,11 +8,45 @@ Pois não foi possivel catalogar a versão `0.1`, `0.2` ou `0.3`.
 
 
 ---
-<h2 align="center">📑 DEV 00:00 --/--/---- V0.5:</h2>
+<h2 align="center">📑 21:12 17/04/2022 V0.5.0:</h2>
 <p align="center">type: ALPHA</p><br>
-<p align="center">In dev ;)</p>
 
-<h2 align="center">📑 00:16 16/04/2022 V0.4:</h2>
+### 1. Agora tem uma pequena sincronização com a cor do drone e as cores dos comandos
+
+![image](https://user-images.githubusercontent.com/69019082/163737134-a1e39a42-3261-4c71-a4ce-7be6d0ccb891.png)
+
+### 2. Mais um comando foi adicionados padronicamente na bios.
+
+`[]` = `Necessario`<br>
+`()` = `Não necessario`
+
+  + place EX: `place [DIREÇÃO 0 até 6] (SORRATEIRAMENTE true ou false)`
+
+### 3. Bios mais optimizada
+
+agora a bios está com variaveis menores e compactas para que alterações por vocês ou eventualmente sejam possivels. O total seria de 
+
+### 4. Aquivo Novo chamado de Control.lua
+
+Esse arquivo faz download dos 2 arquivos Bios e Client automaticamente.<br>
+Muito util para quem odeio ficar copiando e colando codigo agora é só usar `wget https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/Control.lua Control.lua`.<br>
+Para usar essa função é necessario usar uma Internet Card.<br>
+Em fim ela faz download para você os arquivos.
+
+### 5. Troca de port
+
+Agora tanto a port do Client e da Bios foi trocada para `2412`<br>
+É possivel mudar caso não queira, só lembre-se de mudar as portas como<br>
+![image](https://user-images.githubusercontent.com/69019082/163737588-de7720ae-6b3c-48fc-95b5-b986d7b7def8.png)
+
+  - Receive em Client tem que ser a mesma da função de Bios<br>
+![image](https://user-images.githubusercontent.com/69019082/163737612-1bc98967-c712-4377-8d5e-bb0f34dcfdbc.png)
+
+  - E Send em Client temm que ser a emsma de Bios em `m.open()`!<br>
+   ![image](https://user-images.githubusercontent.com/69019082/163737644-1e171a70-4355-48ae-8b4d-831e23f15759.png)
+
+
+<h2 align="center">📑 00:16 16/04/2022 V0.4.0:</h2>
 <p align="center">type: ALPHA</p>
 
 ### 1. Mais comandos foram adicionados padronicamente na bios.
