@@ -6,10 +6,10 @@ local function Send(msg)m.broadcast(2412,msg)end
 m.open(2412)
 local function exe()
     while true do
-        local evt,_,_,_,_,cmd,arg1,arg2,arg3,arg4= computer.pullSignal()
-        if evt== "modem_message" then
-            local exec= {motive= "none", state= false, out= nil}
-            local cmd= Split(cmd, " ")
+        local evt,_,_,_,_,cmd = computer.pullSignal()
+        if evt == "modem_message" then
+            local exec = {motive= "none", state= false, out= nil}
+            local cmd = Split(cmd, " ")
             if cmd[1] == "move" or cmd[1] == "mov" then
                 if cmd[2] then exec.out = d.move((tonumber(cmd[2]) or 0), (tonumber(cmd[3]) or 0), (tonumber(cmd[4]) or 0)) exec.state = true else exec.motive="No args" end
             elseif cmd[1] == "setstatustext" or cmd[1] == "sst" then
@@ -44,7 +44,7 @@ local function exe()
                 exec.motive = "Command not found"
             end
             if exec.out == nil then exec.out = " " elseif exec.out == false then exec.out = "false, Some error ocurred!" end
-            return exec, cmd[1], '👌'
+            return exec,cmd[1],'👌'
         end
     end
 end
