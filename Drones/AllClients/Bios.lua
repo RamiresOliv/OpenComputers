@@ -1,18 +1,17 @@
 local function proxyComp(name)return component.proxy(component.list(name)())end
-function Split(s,del)out={};for match in(s..del):gmatch("(.-)"..del)do;table.insert(out,tostring(match));end return out;end
+function Split(s, del) out={}; for match in (s .. del):gmatch("(.-)"..del) do table.insert(out,tostring(match))end return out;end
 local m=proxyComp("modem")
 local d=proxyComp("drone")
 local function Send(msg)m.broadcast(2412,msg)end
 m.open(2412)
-
 local function exe()
     while true do
         local evt,_,_,_,_,cmd,arg1,arg2,arg3,arg4= computer.pullSignal()
         if evt== "modem_message" then
             local exec= {motive= "none", state= false, out= nil}
-            local cmd= Split(cmd_all, " ")
+            local cmd= Split(cmd, " ")
             if cmd[1] == "move" or cmd[1] == "mov" then
-                if cmd[2] then Args = Split(cmd[2], ",") exec.out = d.move((tonumber(cmd[2]) or 0), (tonumber(cmd[3]) or 0), (tonumber(cmd[4]) or 0)) exec.state = true else exec.motive="No args" end
+                if cmd[2] then exec.out = d.move((tonumber(cmd[2]) or 0), (tonumber(cmd[3]) or 0), (tonumber(cmd[4]) or 0)) exec.state = true else exec.motive="No args" end
             elseif cmd[1] == "setstatustext" or cmd[1] == "sst" then
                 if cmd[2] then exec.out = d.setStatusText(cmd[2]) exec.state = true else exec.motive="No 2 args" end
             elseif cmd[1] == "setlightcolor" or cmd[1] == "slc" then
