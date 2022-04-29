@@ -17,7 +17,7 @@ print("Starting...")
 os.sleep(1)
 print("Checking Updates...")
 os.sleep(1)
-local success, response = pcall(internet.request, "https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/Bios.lua")
+local success, response = pcall(internet.request, "https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/AllClients/Bios.lua")
 if success then
     os.remove(folder.."/Bios.lua")
     local f, reason = io.open("Bios.lua", "a")
@@ -39,7 +39,7 @@ if success then
     f:close()
 end
 os.sleep(1)
-local success, response = pcall(internet.request, "https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/Client.lua")
+local success, response = pcall(internet.request, "https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/AllClients/Client.lua")
 if success then
     os.remove(folder.."/Client.lua")
     local f, reason = io.open("Client.lua", "a")
