@@ -78,7 +78,7 @@ agora coloque uma EEPROM vazia no computador
 
 Agora vamos para o VSCODE...
 
-**Ei ei! Super dica:** caso você tenha uma internet card em seu compudor no Minecraft você pode usar esse comando para facilitar as coisas `wget https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/Bios.lua /home/Bios.lua` ele ira cirar um arquivo ja com tudo que você precisa sem precisar criar e configurar.
+**Ei ei! Super dica:** caso você tenha uma internet card em seu compudor no Minecraft você pode usar esse comando para facilitar as coisas `wget https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/Files/Bios.lua /home/Bios.lua` ele ira cirar um arquivo ja com tudo que você precisa sem precisar criar e configurar.
 
 Crie um arquivo dentro de `home` com o nome `Bios.lua`
 
@@ -126,7 +126,7 @@ mas agora vamos mandar comandos para ele!
 
 ## Client
 
-**Ei ei! Sou eu denovo com uma Super dica:** caso você tenha uma internet card em seu compudor no Minecraft você pode usar esse comando para facilitar as coisas `wget https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/Client.lua /home/Client.lua` ele ira cirar um arquivo ja com tudo que você precisa sem precisar criar e configurar.
+**Ei ei! Sou eu denovo com uma Super dica:** caso você tenha uma internet card em seu compudor no Minecraft você pode usar esse comando para facilitar as coisas `wget https://raw.githubusercontent.com/RamiresOliv/OpenComputers/master/Drones/Files/Client.lua /home/Client.lua` ele ira cirar um arquivo ja com tudo que você precisa sem precisar criar e configurar.
 
 Crie um arquivo denovo no seu PC que sera onde iremos enviar mensagens para o drone
 
